@@ -39,7 +39,7 @@ module.exports.fetchCustomer=async function(req,res){
 }
 module.exports.fetchSpecificCustomerOrderList=async function(req,res){
     console.log("customer id",req.params.customerId);
-    let customer=await Customer.find({"id":req.params.customerId}).populate('productId');
+    let customer=await Customer.find({"id":req.params.customerId});
     console.log(customer," is the customer who want to fetch specific customer order list");
     if(customer){
         let productListName=[];
