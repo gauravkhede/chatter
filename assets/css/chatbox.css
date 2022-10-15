@@ -1,0 +1,29 @@
+#chatbox-container{
+    position:absolute;
+    height:14rem;
+    width:15rem;
+    border:1px solid black;
+    top: 68vh;
+    left: 80vw;
+}
+.message-container{
+    min-height:10rem;
+    width:inherit;
+    
+}
+.message-container ul{
+    list-style-type: none;
+}
+.other-message{
+    background-color: lightgoldenrodyellow;
+     
+}
+.self-message{
+    background-color: lightgreen;
+    display: block;
+    text-align: right;
+    margin-top:0.5rem;
+    margin-right: 0.6rem;
+    margin-bottom: 0.5rem;
+    
+}

@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="css/chatbox.css">
+<h1> Home page running...</h1>
+<form method="POST" enctype="multipart/form-data" action="/users/update">
+    <input type="file" name="avatar" placeholder="profile Picture">
+    <input type="submit" value="submit">
+
+</form>
+<% for(var user of users) { %>
+    <img src="<%= user.avatar%>" alt="user pic" width="100"/>
+    <% }%>
+
+    <div id="chatbox-container"> 
+        <div class="message-container">
+            <ul id="chat_messages_list"}>
+                <li >
+                    <span class="other-message"> His/Her Message</span>
+                </li>
+                <li>
+                    <span class="self-message"> My Message</span>
+                </li>
+            </ul>
+            
+            </div> 
+        <div className="form-container">
+            <input type="text" id="chatbox-input"/>
+            <Button id="send-button">Send</Button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+        <script src="/js/chat_engine.js" ></script>
+        <script>
+            new chatEngine('chatbox-container','gauravkhede1@gmail.com')
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -1,5 +1,6 @@
 const Customer= require('../models/customerDetails');
 const Product = require('../models/productDetails');
+const User = require('../models/users');
 
 module.exports.createCustomer=async function(req,res){
     try{
@@ -68,5 +69,41 @@ module.exports.fetchSpecificCustomerOrderList=async function(req,res){
     }
     return res.status(404).json({
         message:"Invalid customer Id or Unable to fetch Customer product Details"
+    })
+}
+module.exports.updateUser=function(req,res){
+    console.log("********** ",req.body);
+    try{
+        User.uploadedAvatar(req,res,function(err){
+            if(err){ console.log('*****Multer Error ',err); return;}
+            
+            if(req.file){
+                console.log("req.file ke andar aagaya");
+                User.create({
+                    avatar:User.avatarPath+'/'+req.file.filename
+                },function(err,user){
+                    if(err){
+                        console.log("error in creating user",err);
+                        return;
+                    }
+                    
+                    console.log(user);
+                    return res.redirect('back');
+                })
+            }else{
+                console.log(" no file found in request");
+            }
+        })
+    
+    }
+    catch (err) {
+    console.log('Error',err);
+    return res.redirect('back');
+    }
+
+}
+module.exports.signIn=function(req,res){
+    res.render('signin',{
+        title:"signin"
     })
 }
