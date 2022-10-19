@@ -1,3 +1,4 @@
+const Client = require('../models/client');
 const Customer= require('../models/customerDetails');
 const Product = require('../models/productDetails');
 const User = require('../models/users');
@@ -103,7 +104,70 @@ module.exports.updateUser=function(req,res){
 
 }
 module.exports.signIn=function(req,res){
-    res.render('signin',{
-        title:"signin"
+    Client.findOne({email:req.body.email},function(err,user){
+        if(err){
+            console.log("Error in finding the user in signIn",err);
+            return;
+        }
+        if(user){
+            if(user.password!=req.body.password){
+                console.log("password Incorrect");
+                return res.redirect("back");
+            }
+            // handle session creation 
+            res.cookie('user_id',user._id);
+            return res.redirect('/profile');
+        }
     })
+   
+}
+module.exports.signUp=function(req,res){
+    console.log(req.body," is the requested body");
+    if(req.body.password!=req.body.confirm_password){
+        return res.redirect('back');
+    }
+    Client.findOne({email:req.body.email},function(err,user){
+        if(err){
+            console.log("error in finding user",err);
+            return;
+        }
+        if(!user){
+            Client.create({
+                email:req.body.email,
+                password:req.body.password
+            },function(err,newUser){
+                if(err){
+                    console.log("error in finding user while signUp",err);
+                    return;
+                }
+                return res.redirect('back');
+            })
+        }
+        else{
+            console.log('user already exist');
+            return res.redirect('back');
+        }
+    })
+   
+}
+
+module.exports.Profile=async function(req,res){
+    let all_users=await Client.find({});
+    console.log(req.cookies);
+    if(req.cookies.user_id){
+        Client.findById(req.cookies.user_id,function(err,user){
+            if(user){
+                res.render('Welcome',
+                {
+                    title:"User joined",
+                    user:user,
+                    all_users:all_users
+                })
+            }else{
+                return res.redirect('/signUp');
+            }
+        })
+    }else{
+        return res.redirect('/signIn');
+    }
 }

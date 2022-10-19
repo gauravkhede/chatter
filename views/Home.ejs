@@ -8,7 +8,21 @@
 <% for(var user of users) { %>
     <img src="<%= user.avatar%>" alt="user pic" width="100"/>
     <% }%>
+    <!-- for sign In purpose  -->
+    <form action="/signIn" method="POST">
+        <input type="text" name="email" placeholder="Enter Name"/>
+        <input type="password" name="password" placeholder="password" />
+        <input type="submit" value="Submit" />
 
+    </form>
+    <!-- for signUp purpose  -->
+    <form action="/signUp" method="POST">
+        <input type="text" name="email" placeholder="Enter Name">
+        <input type="password" name="password" placeholder="password" >
+        <input type="password" name="confirm_password" placeholder="re Enter your password" >
+        <input type="submit" value="Submit" />
+    </form>
+    <!-- for chatting purpose  -->
     <div id="chatbox-container"> 
         <div class="message-container">
             <ul id="chat_messages_list"}>

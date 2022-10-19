@@ -13,5 +13,5 @@ const clientSchema = new mongoose.Schema({
     timestamps:true    
 
 });
-const Client = mongoose.models('User',clientSchema);
+const Client = mongoose.model('Client',clientSchema);
 module.exports=Client;

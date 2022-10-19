@@ -1,0 +1,18 @@
+.individualChatting{
+    display:none;
+    position:absolute;
+    height:14rem;
+    width:18rem;
+    border:1px solid black;
+    top: 67vh;
+    left: 60vw;
+}
+.visibleChat{
+    display:visible;
+    position:absolute;
+    height:14rem;
+    width:18rem;
+    border:1px solid black;
+    top: 67vh;
+    left: 60vw;
+}
