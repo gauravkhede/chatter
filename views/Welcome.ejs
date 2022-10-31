@@ -1,23 +1,23 @@
 <link rel="stylesheet" href="css/chatbox.css">
 <link rel="stylesheet" href="css/welcome.css">
 <h1>Welcome <%= user.email %></h1>
+
 <div> 
     <h3>Friends List</h3>
     <% for(let u of all_users){ %>
         <button onclick='
             return openChat("<%=user.email%>","<%= u.email%>")
             '><%= u.email %> </button><br />
+            
         <% } %>        
 </div>
 <div class="individualChatting">
-    
+
         <div class="message-container">
+            <div class="nameDisplay"> </div>
             <ul id="individual_chat_messages_list"}>
                 <li >
                     <span class="other-message"> His/Her Message</span>
-                </li>
-                <li>
-                    <span class="self-message"> My Message</span>
                 </li>
             </ul>
             
@@ -61,6 +61,12 @@
             console.log(userEmail,"-",friendEmail);
             new individualChatEngine('individualChatting',userEmail,friendEmail);
             var chatbox_container=document.getElementsByClassName("individualChatting")[0];
+            // var nameDisplay=document.getElementsByClassName("nameDisplay")[0];
+            let name= $('<h4>');
+            name.append($('<span>',{
+                'html': friendEmail.split("@")[0]
+            }));
+            $('.nameDisplay').append(name);
             chatbox_container.classList.remove("individualChatting");
             chatbox_container.classList.add("visibleChat");
             return;    

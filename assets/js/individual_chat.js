@@ -30,6 +30,7 @@ class individualChatEngine{
                 chatroom: userEmail.split("@")[0]+"_"+friendEmail.split("@")[0],
             });
             self.socket.on('user_joined',function(data){
+                $('.message-container').append(`<p>${data.user_email.split("@")[0]} Joined</p>`)
                 console.log('a user joined!',data);
             })
         });
@@ -53,24 +54,24 @@ class individualChatEngine{
 
             }
         });
-        // self.socket.on('load_old_messages',function(docs){
-        //     for(var i=0;i<docs.length;i++){
-        //     let newMessage= $('<li>');
-        //     let messageType='other-message';
-        //     if(docs.user_email==self.userEmail){    
-        //         messageType='self-message';
-        //     }
+        self.socket.on('load_old_messages',function(docs){
+            for(var i=0;i<docs.length;i++){
+            let newMessage= $('<li>');
+            let messageType='other-message';
+            if(docs.user_email==self.userEmail){    
+                messageType='self-message';
+            }
 
-        //     newMessage.append($('<span>',{
-        //         'html': docs[i].message
-        //     }));
-        //     newMessage.append($('<sub>',{
-        //         'html':docs[i].user_email,
-        //     }));
-        //     newMessage.addClass(messageType);
-        //     $('#chat_messages_list').append(newMessage);
-        // }
-        // });
+            newMessage.append($('<span>',{
+                'html': docs[i].message
+            }));
+            newMessage.append($('<sub>',{
+                'html':docs[i].user_email,
+            }));
+            newMessage.addClass(messageType);
+            $('#individual_chat_messages_list').append(newMessage);
+        }
+        });
 
         self.socket.on('recieve_message',function(data){
             console.log('message recieved',data.message);

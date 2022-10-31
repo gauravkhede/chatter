@@ -16,3 +16,8 @@
     top: 67vh;
     left: 60vw;
 }
+.nameDisplay{
+    height:1rem;
+    margin-left: 30%;
+    border:1px solid red;
+}
