@@ -55,10 +55,15 @@ class individualChatEngine{
             }
         });
         self.socket.on('load_old_messages',function(docs){
+            
+            
             for(var i=0;i<docs.length;i++){
-            let newMessage= $('<li>');
+            let time=docs[i].updatedAt.split("T")[1];
+            let hours=(parseInt(time.split(":")[0])+5)%24+":"+(parseInt(time.split(":")[1])+30)%60;
+            let newMessage= $('<li class="mb-2 rounded-top">');
             let messageType='other-message';
-            if(docs.user_email==self.userEmail){    
+            
+            if(docs[i].user_email==self.userEmail){    
                 messageType='self-message';
             }
 
@@ -66,8 +71,9 @@ class individualChatEngine{
                 'html': docs[i].message
             }));
             newMessage.append($('<sub>',{
-                'html':docs[i].user_email,
+                'html':hours,
             }));
+            console.log(messageType);
             newMessage.addClass(messageType);
             $('#individual_chat_messages_list').append(newMessage);
         }
@@ -76,7 +82,7 @@ class individualChatEngine{
         self.socket.on('recieve_message',function(data){
             console.log('message recieved',data.message);
 
-            let newMessage= $('<li>');
+            let newMessage= $('<li class="mb-2">');
 
             let messageType='other-message';
             if(data.user_email==self.userEmail){

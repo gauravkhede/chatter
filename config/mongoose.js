@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
+const env=require('./environment');
 
-mongoose.connect('mongodb+srv://gaurav_khede:Q9mKvwGGiWkw5KSa@cluster0.gy90rwq.mongodb.net/flixStock_Assignment?retryWrites=true');
+mongoose.connect(`mongodb+srv://gaurav_khede:CxBwZDQN4ctUEikh@cluster0.mqsuwlh.mongodb.net/${env.db}?retryWrites=true`);
 
 
 const db=mongoose.connection;

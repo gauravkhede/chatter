@@ -5,6 +5,8 @@ const cors=require('cors');
 // var bodyParser = require('body-parser');
 // var jsonParser = bodyParser.json();
 const db=require('./config/mongoose');
+const env=require('./config/environment');
+const logger=require('morgan');
 const cookieParser = require('cookie-parser');
 app.use(express.urlencoded());
 app.use(cookieParser());
@@ -12,8 +14,10 @@ app.use('/',require('./routes'));
 app.set('view engine','ejs');
 app.set('views','./views');
 app.use('/uploads',express.static(__dirname+'/uploads'));
+app.use(logger(env.morgan.mode,env.morgan.options));
 app.use(cors());
 app.use(express.static("assets"));
+
 
 
 const chatServer= require('http').Server(app);

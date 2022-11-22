@@ -1,40 +1,46 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="css/chatbox.css">
 <link rel="stylesheet" href="css/welcome.css">
 <h1>Welcome <%= user.email %></h1>
-
-<div> 
-    <h3>Friends List</h3>
+<div class="d-flex flex-row h-100">
+<div class="col-md-3 friendsContact "> 
+    <h3 style="color:white; padding:2px; font-weight: 500;">Friends List</h3>
     <% for(let u of all_users){ %>
         <button onclick='
             return openChat("<%=user.email%>","<%= u.email%>")
-            '><%= u.email %> </button><br />
+            ' class="buttonNone mt-2" style="color:white"><%= u.email %> </button><br />
             
         <% } %>        
 </div>
-<div class="individualChatting">
+<div class="col-md-9 chatMessageContainer ">
+<div class="individualChatting border border-success w-90 h-75 m-2">
 
-        <div class="message-container">
+        <div class="message-container  h-75">
             <div class="nameDisplay"> </div>
             <ul id="individual_chat_messages_list"}>
-                <li >
+                <!-- <li >
                     <span class="other-message"> His/Her Message</span>
-                </li>
+                </li> -->
             </ul>
             
             </div> 
-        <div className="form-container">
-            <input type="text" id="chatbox-input"/>
-            <Button id="send-button">Send</Button>
+        <div class="form-container">
+            
+            <input type="text" id="chatbox-input" class="w-75 ml-5" placeholder="Type Something here..."/>
+            
+            <Button id="send-button" class="ml-2 "><iconify-icon icon="bi:send" width="21" height="20"></iconify-icon></Button>
             </div>
         
         
 
 </div>
-<div id="chatbox-container"> 
+</div>
+</div>
+<!-- <div id="chatbox-container"> 
     <div class="message-container">
         <ul id="chatMessagesList"}>
             <li >
-                <span class="other-message"> His/Her Message</span>
+                <span class="other-message "> His/Her Message</span>
             </li>
             <li>
                 <span class="self-message"> My Message</span>
@@ -42,11 +48,11 @@
         </ul>
         
         </div> 
-    <div className="form-container">
+    <div className="form-container ">
         <input type="text" id="chatboxInput"/>
         <Button id="sendButton">Send</Button>
         </div>
-    </div>
+    </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
     <script src="/js/group_chat.js" ></script>
@@ -61,16 +67,19 @@
             console.log(userEmail,"-",friendEmail);
             new individualChatEngine('individualChatting',userEmail,friendEmail);
             var chatbox_container=document.getElementsByClassName("individualChatting")[0];
-            // var nameDisplay=document.getElementsByClassName("nameDisplay")[0];
-            let name= $('<h4>');
+            let name= $('<h5>');
             name.append($('<span>',{
                 'html': friendEmail.split("@")[0]
             }));
             $('.nameDisplay').append(name);
             chatbox_container.classList.remove("individualChatting");
             chatbox_container.classList.add("visibleChat");
+            
             return;    
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
