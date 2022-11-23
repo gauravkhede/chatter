@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod_start": "SET NODE_ENV=production && nodemon index.js"
+    "prod_start": "SET NODE_ENV=production && nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Gaurav Khede",
   "license": "ISC",
