@@ -1,5 +1,6 @@
 const express=require('express');
 const app=express();
+require('./config/view-helper')(app);
 const port=8000;
 const cors=require('cors');
 // var bodyParser = require('body-parser');

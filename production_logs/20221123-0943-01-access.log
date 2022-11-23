@@ -1,0 +1,45 @@
+[0mGET /css/chatbox.css [32m200[0m 20.119 ms - 614[0m
+[0mGET /js/chat_engine.js [32m200[0m 23.249 ms - 2833[0m
+[0mGET /css/chatbox.css [36m304[0m 2.078 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 1.542 ms - -[0m
+[0mGET /favicon.ico [33m404[0m 3.451 ms - 150[0m
+[0mGET /css/chatbox.css [36m304[0m 1.580 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 1.158 ms - -[0m
+[0mGET /css/chatbox.css [36m304[0m 3.943 ms - -[0m
+[0mGET /css/welcome.css [32m200[0m 11.950 ms - 941[0m
+[0mGET /js/group_chat.js [32m200[0m 14.106 ms - 2984[0m
+[0mGET /js/individual_chat.js [32m200[0m 15.751 ms - 3579[0m
+[0mGET /css/chatbox.css [36m304[0m 3.941 ms - -[0m
+[0mGET /css/welcome.css [36m304[0m 1.806 ms - -[0m
+[0mGET /js/group_chat.js [36m304[0m 1.374 ms - -[0m
+[0mGET /js/individual_chat.js [36m304[0m 1.252 ms - -[0m
+::1 - - [22/Nov/2022:11:45:44 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:45:44 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:45:44 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:45:44 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:45:44 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:46:40 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:46:48 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:46:48 +0000] "GET /css/welcome.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:46:48 +0000] "GET /js/group_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:11:46:48 +0000] "GET /js/individual_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:02 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:02 +0000] "GET /css/welcome.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:02 +0000] "GET /js/group_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:02 +0000] "GET /js/individual_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:04 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:04 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:05 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:25:05 +0000] "GET /js/chat_engine.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:26:51 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:26:51 +0000] "GET /css/welcome.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:26:51 +0000] "GET /js/group_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:26:51 +0000] "GET /js/individual_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:23 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:23 +0000] "GET /css/welcome.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:23 +0000] "GET /js/group_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:23 +0000] "GET /js/individual_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:30 +0000] "GET /css/chatbox.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:30 +0000] "GET /css/welcome.css HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:30 +0000] "GET /js/group_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+::1 - - [22/Nov/2022:12:27:30 +0000] "GET /js/individual_chat.js HTTP/1.1" 304 - "http://localhost:8000/profile" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
